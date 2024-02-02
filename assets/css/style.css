@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    pad: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 18px;
+}
+    main{
+        background: #FBFADA;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+        main section{
+            transition: .5s all ease;
+            display: flex;
+            position: absolute;
+            left: 10;
+            max-width: 90%;
+            width: 100%;
+            height: 80%;
+        }
+        /* Car with comment block */
+            main section #start{
+                position: absolute;
+                top: -7%;
+                left: 2%;
+                background: url(../images/start.svg);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 120px;
+                height: 120px;
+                cursor: pointer;
+            }
+            main section .carAndComment{
+                z-index: 100;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                width: 120px;
+                height: 120px;
+                transition: .4s all ease;
+            }
+                main section .carAndComment #comment{
+                    width: 150px;
+                    position: absolute;
+                    z-index: 2;
+                    height: 40px;
+                    background-color: #fff;
+                    border-radius: 20px;
+                    text-align: center;
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    transform: translateX(70%);
+                    font-weight: 900;
+                    font-size: 12px;
+                }
+                main section .carAndComment .car{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                }
+        main section .cityBlock{
+            display: flex;
+            flex-direction: column;
+            width: 120px;
+            height: 120px;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            cursor: pointer;
+        }
+            main section .cityBlock img{
+                width: 100%;
+                height: 100%;
+            }
+            main section .cityName{
+                font-weight: 900;
+            }
+    main #showNav{
+        width: 2%;
+        transition: .5s all ease;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        height: 50px;
+        background: #ADBC9F;
+        display: flex;
+        justify-content: center;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        align-items: center;
+        cursor: pointer;
+        font-weight: 900;
+        font-size: 25px;
+    }
+
+    main  .navbar{
+        position: absolute;
+        right: 0;
+        width: 0%;
+        transition: .5s all ease;
+        background: #ADBC9F;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        row-gap: 50px;
+    }
+        main .navbar form{
+            display: flex;
+            flex-direction: column;
+            height: 30%;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+        }
+            main .navbar form input{
+                width: 80%;
+                border-radius: 20px;
+                height: 50px;
+                border: none;
+                box-shadow: 0px 0px 5px #fff;
+                padding: 20px;
+            }
+            main .navbar form button{
+                background-color: #436850;
+                width: 40%;
+                color: #fff;
+                border-radius: 15px;
+                cursor: pointer;
+                border: none;
+                transition: .4s all ease;
+                height: 40px;
+                box-shadow: 0px 0px 5px #436850;
+            }
+            main .navbar form button:hover{
+                transform: scale(1.3);
+                box-shadow: 20px 2px 5px #436850;
+            }
+            .searchResult{
+                width: 200px;
+                height: 200px;
+            }
+            #cityInfo{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                row-gap: 20px;
+            }
+                
+
+
+
+
+
+            @media screen and (max-width:600px){
+                main section .carAndComment{
+                    width: 60px;
+                    height: 60px;
+                }
+                
+                main section .cityBlock{
+                    width: 50px;
+                    height: 50px;
+                }
+
+                main section #start{
+                    width: 50px;
+                    height: 50px;
+                    top: -20px;
+                }
+            }
